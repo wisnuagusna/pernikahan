@@ -614,146 +614,108 @@ document.addEventListener("DOMContentLoaded", function() {
 				<div class="elementor-widget-container">
 					<h2 class="elementor-heading-title elementor-size-default">Amplop Digital</h2>				</div>
 				</div>
-				<div class="elementor-element elementor-element-a27f934 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="a27f934" data-element_type="widget" data-e-type="widget" data-widget_type="divider.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-divider">
-			<span class="elementor-divider-separator">
-						</span>
-		</div>
-						</div>
-				</div>
-				<div class="elementor-element elementor-element-73ee1f5 elementor-widget elementor-widget-heading" data-id="73ee1f5" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika Anda ingin memberikan tanda kasih, kami menyediakan amplop digital.</h2>				</div>
-				</div>
-		<div class="elementor-element elementor-element-7fdd420 e-grid e-con-full e-con e-child" data-id="7fdd420" data-element_type="container" data-e-type="container">
-		<div class="elementor-element elementor-element-51e9746 e-con-full e-flex elementor-invisible e-con e-child" data-id="51e9746" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;bounce&quot;,&quot;animation_tablet&quot;:&quot;bounce&quot;}">
-				<div class="elementor-element elementor-element-d87294a elementor-grid-mobile-0 e-grid-align-mobile-center elementor-shape-rounded elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="d87294a" data-element_type="widget" data-e-type="widget" data-widget_type="social-icons.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-social-icons-wrapper elementor-grid">
-							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-money-check elementor-repeater-item-5641519" target="_blank">
-						<span class="elementor-screen-only">Money-check</span>
-						<svg aria-hidden="true" class="e-font-icon-svg e-fas-money-check" viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M0 448c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V128H0v320zm448-208c0-8.84 7.16-16 16-16h96c8.84 0 16 7.16 16 16v32c0 8.84-7.16 16-16 16h-96c-8.84 0-16-7.16-16-16v-32zm0 120c0-4.42 3.58-8 8-8h112c4.42 0 8 3.58 8 8v16c0 4.42-3.58 8-8 8H456c-4.42 0-8-3.58-8-8v-16zM64 264c0-4.42 3.58-8 8-8h304c4.42 0 8 3.58 8 8v16c0 4.42-3.58 8-8 8H72c-4.42 0-8-3.58-8-8v-16zm0 96c0-4.42 3.58-8 8-8h176c4.42 0 8 3.58 8 8v16c0 4.42-3.58 8-8 8H72c-4.42 0-8-3.58-8-8v-16zM624 32H16C7.16 32 0 39.16 0 48v48h640V48c0-8.84-7.16-16-16-16z"></path></svg>					</a>
-				</span>
-					</div>
-						</div>
-				</div>
-				<div class="elementor-element elementor-element-b76c9e1 elementor-widget elementor-widget-heading" data-id="b76c9e1" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">Dana</h2>				</div>
-				</div>
-				<div class="elementor-element elementor-element-29ed9e5 elementor-widget elementor-widget-heading" data-id="29ed9e5" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">0895429029197</h2>				</div>
-				</div>
-				<div class="elementor-element elementor-element-961e534 elementor-widget elementor-widget-heading" data-id="961e534" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">a.n. Dewangga</h2>				</div>
-				</div>
-				<div class="elementor-element elementor-element-c6dd368 elementor-widget elementor-widget-html" data-id="c6dd368" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
-				<div class="elementor-widget-container">
-					<button class="btn-copy-dana" onclick="copyNomorDana()">
-  <span> Salin</span>
-</button>
+				<div class="btn-group-wedding">
+  <button class="btn-copy-dana btn-custom-wedding" onclick="copyNomorDana()">
+    <span>Salin</span>
+  </button>
+  
+  <button class="btn-qr-dana btn-custom-wedding" onclick="openModal('qr-dewangga')">
+    <span>Lihat QR</span>
+  </button>
+</div>
 
 <script>
 function copyNomorDana() {
-  // Ganti nomor di bawah ini sesuai dengan nomor Dana kamu
   const nomorDana = "0895429029197"; 
-  
   navigator.clipboard.writeText(nomorDana).then(() => {
-    // Efek teksnya berubah pas berhasil di-copy
     const btn = document.querySelector('.btn-copy-dana span');
     btn.innerText = "✅ Tersalin!";
-    
-    // Balikin teksnya jadi 'Copy' lagi setelah 2 detik
-    setTimeout(() => {
-      btn.innerText = "Salin";
-    }, 2000);
-  }).catch(err => {
-    console.error('Gagal menyalin text: ', err);
-  });
+    setTimeout(() => { btn.innerText = "Salin"; }, 2000);
+  }).catch(err => { console.error('Gagal menyalin text: ', err); });
 }
 </script>
-
-<style>
-/* Sesi bikin tombolnya aesthetic sesuai tema website-mu */
-.btn-copy-dana {
-  background-color: #7d6446; /* Ganti kode hex warna ini biar match sama tema cokelatmu */
-  color: #ffffff;
-  border: none;
-  padding: 8px 16px;
-  font-size: 14px;
-  font-family: sans-serif;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: block;
-  margin: 10px auto 0 auto; /* Biar tombolnya otomatis di tengah (center) */
-}
-
-.btn-copy-dana:hover {
-  background-color: #5a4731; /* Warna pas tombol di-hover cursor */
-  transform: scale(1.05);
-}
-</style>				</div>
-				</div>
-				</div>
-		<div class="elementor-element elementor-element-825337c e-con-full e-flex elementor-invisible e-con e-child" data-id="825337c" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;bounce&quot;,&quot;animation_tablet&quot;:&quot;bounce&quot;}">
-				<div class="elementor-element elementor-element-faa243e elementor-grid-mobile-0 e-grid-align-mobile-center elementor-shape-rounded elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="faa243e" data-element_type="widget" data-e-type="widget" data-widget_type="social-icons.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-social-icons-wrapper elementor-grid">
-							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-money-check elementor-repeater-item-5641519" target="_blank">
-						<span class="elementor-screen-only">Money-check</span>
-						<svg aria-hidden="true" class="e-font-icon-svg e-fas-money-check" viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M0 448c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V128H0v320zm448-208c0-8.84 7.16-16 16-16h96c8.84 0 16 7.16 16 16v32c0 8.84-7.16 16-16 16h-96c-8.84 0-16-7.16-16-16v-32zm0 120c0-4.42 3.58-8 8-8h112c4.42 0 8 3.58 8 8v16c0 4.42-3.58 8-8 8H456c-4.42 0-8-3.58-8-8v-16zM64 264c0-4.42 3.58-8 8-8h304c4.42 0 8 3.58 8 8v16c0 4.42-3.58 8-8 8H72c-4.42 0-8-3.58-8-8v-16zm0 96c0-4.42 3.58-8 8-8h176c4.42 0 8 3.58 8 8v16c0 4.42-3.58 8-8 8H72c-4.42 0-8-3.58-8-8v-16zM624 32H16C7.16 32 0 39.16 0 48v48h640V48c0-8.84-7.16-16-16-16z"></path></svg>					</a>
-				</span>
-					</div>
-						</div>
-				</div>
-				<div class="elementor-element elementor-element-bb36537 elementor-widget elementor-widget-heading" data-id="bb36537" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">Dana</h2>				</div>
-				</div>
-				<div class="elementor-element elementor-element-30d9152 elementor-widget elementor-widget-heading" data-id="30d9152" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">082371690806</h2>				</div>
-				</div>
-				<div class="elementor-element elementor-element-8941281 elementor-widget elementor-widget-heading" data-id="8941281" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">a.n. Halimah</h2>				</div>
-				</div>
-				<div class="elementor-element elementor-element-ee15b41 elementor-widget elementor-widget-html" data-id="ee15b41" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
-				<div class="elementor-widget-container">
-					<button class="btn-copy-dana" onclick="copyNomorDana()">
-  <span> Salin</span>
-</button>
+<div class="btn-group-wedding">
+  <button class="btn-copy-halimah btn-custom-wedding" onclick="copyNomorHalimah()">
+    <span>Salin</span>
+  </button>
+  
+  <button class="btn-qr-dana btn-custom-wedding" onclick="openModal('qr-halimah')">
+    <span>Lihat QR</span>
+  </button>
+</div>
 
 <script>
-function copyNomorDana() {
-  // Ganti nomor di bawah ini sesuai dengan nomor Dana kamu
+function copyNomorHalimah() {
   const nomorDana = "082371690806"; 
-  
   navigator.clipboard.writeText(nomorDana).then(() => {
-    // Efek teksnya berubah pas berhasil di-copy
-    const btn = document.querySelector('.btn-copy-dana span');
+    const btn = document.querySelector('.btn-copy-halimah span');
     btn.innerText = "✅ Tersalin!";
-    
-    // Balikin teksnya jadi 'Copy' lagi setelah 2 detik
-    setTimeout(() => {
-      btn.innerText = "Salin";
-    }, 2000);
-  }).catch(err => {
-    console.error('Gagal menyalin text: ', err);
-  });
+    setTimeout(() => { btn.innerText = "Salin"; }, 2000);
+  }).catch(err => { console.error('Gagal menyalin text: ', err); });
+}
+</script>
+<div id="qrModal" class="wedding-modal">
+  <div class="wedding-modal-content">
+    <span class="wedding-close-btn" onclick="closeModal()">&times;</span>
+    <h3 id="modalTitle">QR Code Dana</h3>
+    <img id="modalImg" src="" alt="QR Code" class="wedding-qr-image">
+    <p id="modalName" class="wedding-account-name"></p>
+  </div>
+</div>
+
+<script>
+// DATA DYNAMIC UNTUK QR CODE
+// Ganti teks 'https://domainkamu.com/wp-content/uploads/...' dengan URL asli dari WordPress Media Library kamu!
+const qrData = {
+  'qr-dewangga': {
+    title: 'QR Dana Dewangga',
+    imgSrc: 'https://domainkamu.com/wp-content/uploads/qr-dewangga.png', 
+    name: 'a.n. Dewangga'
+  },
+  'qr-halimah': {
+    title: 'QR Dana Halimah',
+    imgSrc: 'https://domainkamu.com/wp-content/uploads/qr-halimah.png',
+    name: 'a.n. Halimah'
+  }
+};
+
+const modal = document.getElementById('qrModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalImg = document.getElementById('modalImg');
+const modalName = document.getElementById('modalName');
+
+function openModal(key) {
+  const data = qrData[key];
+  if (data) {
+    modalTitle.innerText = data.title;
+    modalImg.src = data.imgSrc;
+    modalName.innerText = data.name;
+    modal.style.display = 'flex';
+  }
+}
+
+function closeModal() {
+  modal.style.display = 'none';
+}
+
+// Close otomatis pas klik background gelap luar modal
+window.onclick = function(event) {
+  if (event.target == modal) {
+    closeModal();
+  }
 }
 </script>
 
 <style>
-/* Sesi bikin tombolnya aesthetic sesuai tema website-mu */
-.btn-copy-dana {
-  background-color: #7d6446; /* Ganti kode hex warna ini biar match sama tema cokelatmu */
+/* CSS UNTUK UTILITY & TOMBOL */
+.btn-group-wedding {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.btn-custom-wedding {
   color: #ffffff;
   border: none;
   padding: 8px 16px;
@@ -762,38 +724,82 @@ function copyNomorDana() {
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
-  display: block;
-  margin: 10px auto 0 auto; /* Biar tombolnya otomatis di tengah (center) */
+  min-width: 85px;
+  text-align: center;
 }
 
-.btn-copy-dana:hover {
-  background-color: #5a4731; /* Warna pas tombol di-hover cursor */
-  transform: scale(1.05);
+.btn-copy-dana, .btn-copy-halimah {
+  background-color: #7d6446; /* Warna tombol salin asli kamu */
 }
-</style>				</div>
-				</div>
-				</div>
-				</div>
-					</div>
-				</div>
-		<div class="elementor-element elementor-element-56812a2 e-flex e-con-boxed e-con e-parent" data-id="56812a2" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-4aba8e3 elementor-widget elementor-widget-heading" data-id="4aba8e3" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai.</h2>				</div>
-				</div>
-				<div class="elementor-element elementor-element-bc92ed8 elementor-widget elementor-widget-heading" data-id="bc92ed8" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">Dewangga<br>&amp;<br>Halimah</h2>				</div>
-				</div>
-				<div class="elementor-element elementor-element-856ebf9 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="856ebf9" data-element_type="widget" data-e-type="widget" data-widget_type="divider.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-divider">
-			<span class="elementor-divider-separator">
-						</span>
-		</div>
-						</div>
-				</div>
+
+.btn-qr-dana {
+  background-color: #5a4731; /* Warna tombol QR sengaja dibikin agak beda biar kontras manis */
+}
+
+.btn-custom-wedding:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* CSS UNTUK POP-UP MODAL */
+.wedding-modal {
+  display: none;
+  position: fixed;
+  z-index: 99999; /* Ditambahin biar ga kebalap z-index bawaan Elementor */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+}
+
+.wedding-modal-content {
+  background-color: #dec8b1; /* Krem senada dengan card asli di gambar */
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  color: #4a3319;
+  animation: weddingScaleUp 0.3s ease-in-out;
+}
+
+.wedding-close-btn {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #7d6446;
+}
+
+.wedding-qr-image {
+  width: 180px;
+  height: 180px;
+  margin: 15px auto;
+  border-radius: 10px;
+  border: 4px solid #7d6446;
+  display: block;
+}
+
+.wedding-account-name {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+@keyframes weddingScaleUp {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+</style>
 				<div class="elementor-element elementor-element-4195db4 elementor-widget elementor-widget-heading" data-id="4195db4" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
 					<h2 class="elementor-heading-title elementor-size-default">Semoga menjadi keluarga yang sakinah, mawaddah wa rahmah.<br>Atas doa dan restu yang telah diberikan, kami sekeluarga mengucapkan terimakasih</h2>				</div>
